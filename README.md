@@ -13,12 +13,12 @@
 ## Introduction <a name = "introduction"></a>
 This repository contains a powerful tool built with the Mathematica language for **motif discovery** in biological sequences. This forms a fundamental part of bioinformatics, the field that combines biology and computer science to understand and interpret biological data.
 
-## Applications <a name = "applications"></a>
-Motifs are recurring patterns in DNA sequences that are believed to have a biological significance. Recognizing these motifs is critical for understanding the regulatory mechanisms of genes. This tool can aid biological researchers and bioinformatics professionals in uncovering these motifs, contributing to advances in genomics, medicine, and drug discovery.
-
 This repository contains an efficient and powerful Expectation-Maximization (EM) algorithm implementation in Mathematica, tailored for motif discovery within DNA sequences. It serves as a valuable resource for researchers and practitioners in genomics and related fields, simplifying the task of identifying biologically significant patterns, crucial for understanding gene regulation and advancing personalized medicine.
 
 Recognition to WashU FL2022.E81.CSE.587A.01 - Algorithms for Computational Biology
+
+## Applications <a name = "applications"></a>
+Motifs are recurring patterns in DNA sequences that are believed to have a biological significance. Recognizing these motifs is critical for understanding the regulatory mechanisms of genes. This tool can aid biological researchers and bioinformatics professionals in uncovering these motifs, contributing to advances in genomics, medicine, and drug discovery.
 
 ## Methods <a name = "methods"></a>
 The script employs a combination of statistical techniques to identify motifs in DNA sequences:
