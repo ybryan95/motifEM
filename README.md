@@ -20,17 +20,15 @@ Recognition to WashU FL2022.E81.CSE.587A.01 - Algorithms for Computational Biolo
 ## Applications <a name = "applications"></a>
 Motifs are recurring patterns in DNA sequences that are believed to have a biological significance. Recognizing these motifs is critical for understanding the regulatory mechanisms of genes. This tool can aid biological researchers and bioinformatics professionals in uncovering these motifs, contributing to advances in genomics, medicine, and drug discovery.
 
-> **_NOTE:_** Expectation Maximization (EM) is a powerful statistical tool used to find likely parameter values within a model when you have missing or hidden data. In the context of biological research and bioinformatics, EM, specifically in the form of the Expectation-Maximization algorithm for motif discovery, is used to uncover motifs in DNA sequences.
+> **_NOTE:_** The Expectation Maximization (EM) algorithm is like a detective tool used by scientists to find hidden patterns, or 'motifs', in DNA, RNA, or protein sequences. These motifs are important because they can tell us how genes work, how diseases might start, and other cool biological facts. So how does the EM algorithm do its detective work?
 
-> In simple terms, a motif is a recurring pattern in DNA, RNA, or protein sequences that has a specific function or is associated with particular biological activity. They can be binding sites for proteins (like transcription factors), signals for protein domains, or indicators of disease states, among other things. Identifying these motifs is crucial to understanding biological processes and functions.
+> It's a two-step process. In the first step, called the Expectation step (or 'E-step'), the algorithm makes a guess about where the motifs might be in a sequence. It uses a kind of scorecard, called a Position Frequency Matrix (PFM), which shows how often different parts of the motif appear at different positions.
 
-> Here's how the Expectation-Maximization algorithm aids in uncovering these motifs:
+> The second step, called the Maximization step (or 'M-step'), updates this scorecard based on the guesses from the E-step. The sequences that are more likely to be motifs get a higher score.
 
-> Expectation Step (E-step): This involves the estimation of the motif occurrences in the given sequence data given the current parameters (typically a Position Frequency Matrix, or PFM, representing the motif). During this step, for every subsequence of the length of the motif in each DNA sequence, a "posterior probability" is calculated that reflects the likelihood this subsequence is a motif instance. This probability is calculated using the current PFM and background nucleotide frequencies.
+> The algorithm repeats these two steps over and over again, getting better at finding motifs each time. After a while, it ends up with a scorecard that does a great job of identifying motifs in the sequence data.
 
-> Maximization Step (M-step): In this step, the PFM is re-estimated using the posterior probabilities calculated in the E-step. Each position in the PFM is updated to reflect the weighted average of the nucleotides in the corresponding position of each subsequence, where the weights are the posterior probabilities. This essentially means that subsequences that are more likely to be instances of the motif have a greater influence on the PFM.
-
-> By iteratively performing the E-step and M-step, the algorithm refines its estimates of the motif's PFM, effectively "learning" the motif from the data. Over time, the algorithm converges to a solution where the PFM (and therefore, the motif) is well-defined and corresponds to a recurring pattern in the sequences.
+> Now, let's talk about "total number of motifs" and "probability of a motif". As the algorithm works, it gives a higher score (or probability) to the sequences that are more likely to be motifs. If we add up the scores of all the sequences that look like a particular motif, we get an estimate of the total number of that motif in the data. Meanwhile, the score of a motif at a particular spot gives us the probability that a motif is there.
 
 
 
