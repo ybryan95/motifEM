@@ -20,19 +20,19 @@ Recognition to WashU FL2022.E81.CSE.587A.01 - Algorithms for Computational Biolo
 ## Applications <a name = "applications"></a>
 Motifs are recurring patterns in DNA sequences that are believed to have a biological significance. Recognizing these motifs is critical for understanding the regulatory mechanisms of genes. This tool can aid biological researchers and bioinformatics professionals in uncovering these motifs, contributing to advances in genomics, medicine, and drug discovery.
 
-> **_NOTE:_** **Expectation Maximization (EM) is a powerful statistical tool used to find likely parameter values within a model when you have missing or hidden data. In the context of biological research and bioinformatics, EM, specifically in the form of the Expectation-Maximization algorithm for motif discovery, is used to uncover motifs in DNA sequences.
+> **_NOTE:_** Expectation Maximization (EM) is a powerful statistical tool used to find likely parameter values within a model when you have missing or hidden data. In the context of biological research and bioinformatics, EM, specifically in the form of the Expectation-Maximization algorithm for motif discovery, is used to uncover motifs in DNA sequences.
 
-In simple terms, a motif is a recurring pattern in DNA, RNA, or protein sequences that has a specific function or is associated with particular biological activity. They can be binding sites for proteins (like transcription factors), signals for protein domains, or indicators of disease states, among other things. Identifying these motifs is crucial to understanding biological processes and functions.
+> In simple terms, a motif is a recurring pattern in DNA, RNA, or protein sequences that has a specific function or is associated with particular biological activity. They can be binding sites for proteins (like transcription factors), signals for protein domains, or indicators of disease states, among other things. Identifying these motifs is crucial to understanding biological processes and functions.
 
-Here's how the Expectation-Maximization algorithm aids in uncovering these motifs:
+> Here's how the Expectation-Maximization algorithm aids in uncovering these motifs:
 
-Expectation Step (E-step): This involves the estimation of the motif occurrences in the given sequence data given the current parameters (typically a Position Frequency Matrix, or PFM, representing the motif). During this step, for every subsequence of the length of the motif in each DNA sequence, a "posterior probability" is calculated that reflects the likelihood this subsequence is a motif instance. This probability is calculated using the current PFM and background nucleotide frequencies.
+> Expectation Step (E-step): This involves the estimation of the motif occurrences in the given sequence data given the current parameters (typically a Position Frequency Matrix, or PFM, representing the motif). During this step, for every subsequence of the length of the motif in each DNA sequence, a "posterior probability" is calculated that reflects the likelihood this subsequence is a motif instance. This probability is calculated using the current PFM and background nucleotide frequencies.
 
-Maximization Step (M-step): In this step, the PFM is re-estimated using the posterior probabilities calculated in the E-step. Each position in the PFM is updated to reflect the weighted average of the nucleotides in the corresponding position of each subsequence, where the weights are the posterior probabilities. This essentially means that subsequences that are more likely to be instances of the motif have a greater influence on the PFM.
+> Maximization Step (M-step): In this step, the PFM is re-estimated using the posterior probabilities calculated in the E-step. Each position in the PFM is updated to reflect the weighted average of the nucleotides in the corresponding position of each subsequence, where the weights are the posterior probabilities. This essentially means that subsequences that are more likely to be instances of the motif have a greater influence on the PFM.
 
-By iteratively performing the E-step and M-step, the algorithm refines its estimates of the motif's PFM, effectively "learning" the motif from the data. Over time, the algorithm converges to a solution where the PFM (and therefore, the motif) is well-defined and corresponds to a recurring pattern in the sequences.
+> By iteratively performing the E-step and M-step, the algorithm refines its estimates of the motif's PFM, effectively "learning" the motif from the data. Over time, the algorithm converges to a solution where the PFM (and therefore, the motif) is well-defined and corresponds to a recurring pattern in the sequences.
 
-This process helps bioinformatics professionals and biological researchers uncover motifs in large biological datasets, aiding in the understanding of gene regulation, protein function, disease markers, and more. It is particularly useful in the discovery of novel motifs and in the analysis of large genomic sequences where manual motif discovery would be unfeasible.**
+
 
 ## Methods <a name = "methods"></a>
 The script employs a combination of statistical techniques to identify motifs in DNA sequences:
